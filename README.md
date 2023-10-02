@@ -1,6 +1,6 @@
 # Test Templates
 
-A repository with the gola to test many template engines available for Free Pascal.
+A repository with the goal to test many template engines available for Free Pascal.
 
 ## Template Engines
 

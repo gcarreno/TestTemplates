@@ -33,3 +33,9 @@ A repository with the goal to test many template engines available for Free Pasc
 ### `fptemplate`
 
 This template engine comes by default with the Free Pascal compiler instalation.
+
+pros:
+- Comes with `fpc` installation.
+
+cons:
+- (None since I haven't tested it yet)

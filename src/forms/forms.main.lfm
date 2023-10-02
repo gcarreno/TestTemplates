@@ -1,0 +1,156 @@
+object frmMain: TfrmMain
+  Left = 399
+  Height = 550
+  Top = 250
+  Width = 900
+  Caption = 'frmMain'
+  ClientHeight = 550
+  ClientWidth = 900
+  Constraints.MinHeight = 550
+  Constraints.MinWidth = 900
+  Menu = mmMain
+  Position = poScreenCenter
+  ShowHint = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object pcMain: TPageControl
+    Left = 0
+    Height = 550
+    Top = 0
+    Width = 900
+    ActivePage = tsFPTemplate
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object tsFPTemplate: TTabSheet
+      Caption = 'f&ptemplate'
+      ClientHeight = 519
+      ClientWidth = 890
+      object panFPTemplateButtons: TPanel
+        Left = 0
+        Height = 37
+        Top = 0
+        Width = 890
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 37
+        ClientWidth = 890
+        TabOrder = 0
+        object Button1: TButton
+          Left = 4
+          Height = 33
+          Top = 4
+          Width = 67
+          Action = actFPTemplateProcess
+          Align = alLeft
+          AutoSize = True
+          BorderSpacing.Left = 4
+          BorderSpacing.Top = 4
+          TabOrder = 0
+        end
+      end
+      object psFPTemplate: TPairSplitter
+        Left = 4
+        Height = 474
+        Top = 41
+        Width = 882
+        Align = alClient
+        BorderSpacing.Around = 4
+        Position = 435
+        object psFPTemplateTemplate: TPairSplitterSide
+          Cursor = crArrow
+          Left = 0
+          Height = 474
+          Top = 0
+          Width = 435
+          ClientWidth = 435
+          ClientHeight = 474
+          object panFPTemplateTemplateTitle: TPanel
+            Left = 4
+            Height = 30
+            Top = 4
+            Width = 427
+            Align = alTop
+            BorderSpacing.Around = 4
+            Caption = 'Template'
+            Color = clWindowFrame
+            ParentBackground = False
+            ParentColor = False
+            TabOrder = 0
+          end
+          object memFPTemplateTemplate: TMemo
+            Left = 4
+            Height = 432
+            Top = 38
+            Width = 427
+            Align = alClient
+            BorderSpacing.Around = 4
+            TabOrder = 1
+          end
+        end
+        object psFPTemplateTemplateResult: TPairSplitterSide
+          Cursor = crArrow
+          Left = 440
+          Height = 474
+          Top = 0
+          Width = 442
+          ClientWidth = 442
+          ClientHeight = 474
+          object panFPTemplateResultTitle: TPanel
+            Left = 4
+            Height = 30
+            Top = 4
+            Width = 434
+            Align = alTop
+            BorderSpacing.Around = 4
+            Caption = 'Result'
+            Color = clWindowFrame
+            ParentBackground = False
+            ParentColor = False
+            TabOrder = 0
+          end
+          object memFPTemplateResult: TMemo
+            Left = 4
+            Height = 432
+            Top = 38
+            Width = 434
+            Align = alClient
+            BorderSpacing.Around = 4
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  object mmMain: TMainMenu
+    Left = 586
+    Top = 426
+    object mnuFile: TMenuItem
+      Caption = '&File'
+      object mnuFileExit: TMenuItem
+        Action = actFileExit
+      end
+    end
+    object mnuFPTemplate: TMenuItem
+      Caption = 'f&ptemplate'
+      object MenuItem2mnuFPTemplateProcess: TMenuItem
+        Action = actFPTemplateProcess
+      end
+    end
+  end
+  object alMain: TActionList
+    Left = 679
+    Top = 426
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
+    end
+    object actFPTemplateProcess: TAction
+      Category = 'FPTemplate'
+      Caption = 'Process'
+      OnExecute = actFPTemplateProcessExecute
+    end
+  end
+end

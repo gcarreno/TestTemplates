@@ -30,6 +30,6 @@ A repository with the gola to test many template engines available for Free Pasc
 - MustaPAS
   - https://github.com/leledumbo/mustapas
 
-### FPTemplate
+### `fptemplate`
 
 This template engine comes by default with the Free Pascal compiler instalation.
